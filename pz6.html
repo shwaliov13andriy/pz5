@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Charmander Run</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to top, #87ceeb, #f0f8ff);
+      animation: skyShift 20s infinite linear;
+    }
+
+    @keyframes skyShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 300px;
+      background: url('https://png.pngtree.com/png-vector/20221202/ourmid/pngtree-3d-white-clouds-illustration-png-image_6478630.png') repeat-x;
+      background-size: contain;
+      animation: cloudMove 60s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes cloudMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(90deg, #228B22, #32CD32, #228B22);
+      background-size: 400% 100%;
+      animation: groundShift 8s infinite linear;
+      z-index: 2;
+    }
+
+    @keyframes groundShift {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 0%; }
+    }
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      z-index: 3;
+    }
+    .charmander {
+      position: absolute;
+      bottom: 120px;
+      width: 180px;
+      height: 180px;
+      background-size: 180px 180px;
+      animation: runLeftRight 4s infinite ease-in-out;
+      z-index: 5;
+    }
+
+    @keyframes runLeftRight {
+      0% {
+        left: 100px;
+        background-image: url('https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif');
+      }
+      50% {
+        left: calc(100% - 280px);
+        background-image: url('https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif');
+      }
+      100% {
+        left: 100px;
+        background-image: url('https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif');
+      }
+    }
+
+    .food-left {
+      position: absolute;
+      bottom: 213px;
+      left: -37px;
+      width: 312px;
+      height: 84px;
+      z-index: 3;
+    }
+
+    .food-right {
+      position: absolute;
+      bottom: 233px;
+      right: -79px;
+      width: 303px;
+      height: 100px;
+      z-index: 3;
+    }
+
+    .food-left img, .food-right img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="clouds"></div>
+  <div class="ground"></div>
+  <div class="scene">
+    <div class="food-left">
+      <img src="im1.png" alt="Їжа 1">
+    </div>
+
+    <a href="https://pokemondb.net/pokedex/charmander" target="_blank">
+      <div class="charmander" title="Charmander"></div>
+    </a>
+
+    <div class="food-right">
+      <img src="im2.png" alt="Їжа 2">
+    </div>
+  </div>
+</body>
+</html>
