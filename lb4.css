@@ -1,0 +1,123 @@
+body {
+    font-family: 'Copperplate Papyrus';
+    background-color: #f0f0f0;
+    margin: 20px;
+    color: #444;
+}
+
+.planner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 2px solid #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.plan-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.main-header span {
+    margin-left: 40px;
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: 250px repeat(3, 1fr);
+    grid-template-rows: auto repeat(4, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "sidebar monday tuesday wednesday"
+        "sidebar monday tuesday wednesday"
+        "sidebar thursday friday saturday"
+        "sidebar thursday friday sunday";
+    gap: 0;
+}
+.main-header { grid-area: header; }
+.sidebar     { grid-area: sidebar; }
+.monday      { grid-area: monday; }
+.tuesday     { grid-area: tuesday; }
+.wednesday   { grid-area: wednesday; }
+.thursday    { grid-area: thursday; }
+.friday      { grid-area: friday; }
+.saturday    { grid-area: saturday; }
+.sunday      { grid-area: sunday; }
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday {
+    height: 300px; 
+}
+
+.sidebar,
+.day-cell {
+    padding: 20px;
+    border-right: 2px solid #333;
+}
+
+.day-cell {
+    border-bottom: 2px solid #333;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list h3 {
+    justify-content: space-between;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+
+textarea {
+    width: 100%;           
+    height: 90%;
+    padding: 5px;          
+    font-size: 14px;     
+    border: none;       
+    outline: none;         
+    background: transparent; 
+    resize: none;        
+    box-shadow: none;     
+}
