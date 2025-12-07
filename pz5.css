@@ -270,6 +270,46 @@ footer a:hover {
 }
 @media screen and (min-device-width: 320px)  and (max-device-width: 425px) {
   body {
-   background: #1e2139;
+   background: white;
   }
+  .hct1 {
+    display: block;
+    margin-top: 140px;
+}
+.hct3 {
+    background-color: #FF6464;
+    color: white;
+    border: none;
+    padding: 21px 348px;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.hct4 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.hct5 {
+    margin-top: 70px;
+    background-color: #EDF7FA;
+    padding: 16px 24px;
+    border-radius: 4px;
+    
+}
+.hct6{
+  width: 100%;
+  height: auto;
+}
+.hct8{
+  width: 68%;
+  height: auto;
+}
+.hct9{
+  width: 68%;
+  height: auto;
+}
+
 }
