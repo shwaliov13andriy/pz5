@@ -272,6 +272,15 @@ footer a:hover {
   body {
    background: white;
   }
+  nav ul {
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
   .hct1 {
     display: block;
     margin-top: 140px;
